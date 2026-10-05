@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo expositivo de discos de vinil da Retro Discos, com gêneros musicais, preços estimados e contato pelo WhatsApp.">
+  <meta name="theme-color" content="#171111">
+  <title>Retro Discos | Vinis & Música</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header" id="inicio">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Retro Discos - início">
+        <img src="assets/logo.svg" alt="" width="54" height="54">
+        <span>
+          <strong>RETRO DISCOS</strong>
+          <small>Vinis & Música</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+        <a href="#generos">Gêneros</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#sobre">Sobre</a>
+        <a class="nav-contact" href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <article class="hero-copy">
+          <p class="eyebrow">Som que atravessa gerações</p>
+          <h1 id="hero-title">A experiência do vinil em um catálogo com alma retrô.</h1>
+          <p>
+            Descubra discos de diferentes épocas e estilos, conheça valores estimados e encontre
+            aquele som especial para a sua coleção.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#generos">Explorar gêneros</a>
+            <a class="btn btn-secondary whatsapp-link" href="https://wa.me/5531989695319" target="_blank" rel="noopener noreferrer">Entre em contato!</a>
+          </div>
+          <ul class="hero-highlights" aria-label="Destaques da loja">
+            <li>Vinis clássicos</li>
+            <li>Preços estimados</li>
+            <li>Atendimento pelo WhatsApp</li>
+          </ul>
+        </article>
+
+        <figure class="hero-photo">
+          <img
+            src="https://unsplash.com/photos/uPe_xc_5P_I/download?force=true&w=1200"
+            alt="Parede de loja retrô com discos de vinil expostos"
+            loading="eager"
+          >
+          <figcaption>Uma seleção feita para quem gosta de música, história e coleção.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="genres section" id="generos" aria-labelledby="genres-title">
+      <div class="container">
+        <header class="section-heading">
+          <p class="eyebrow">Escolha seu estilo</p>
+          <h2 id="genres-title">Gêneros musicais</h2>
+          <p>Selecione um gênero para filtrar os discos exibidos no catálogo.</p>
+        </header>
+
+        <nav class="genre-grid" aria-label="Filtros por gênero musical">
+          <button class="genre-card is-active" type="button" data-filter="todos" role="listitem">
+            <span class="genre-icon" aria-hidden="true">★</span>
+            <strong>Todos</strong>
+            <small>Catálogo completo</small>
+          </button>
+
+          <button class="genre-card" type="button" data-filter="rock" role="listitem">
+            <span class="genre-icon" aria-hidden="true">R</span>
+            <strong>Rock</strong>
+            <small>Anos 80, 90 e 2000</small>
+          </button>
+
+          <button class="genre-card" type="button" data-filter="pop-rock" role="listitem">
+            <span class="genre-icon" aria-hidden="true">P</span>
+            <strong>Pop Rock</strong>
+            <small>Anos 80, 90 e 2000</small>
+          </button>
+
+          <button class="genre-card" type="button" data-filter="jazz" role="listitem">
+            <span class="genre-icon" aria-hidden="true">J</span>
+            <strong>Jazz</strong>
+            <small>Clássicos e essenciais</small>
+          </button>
+
+          <button class="genre-card" type="button" data-filter="classica" role="listitem">
+            <span class="genre-icon" aria-hidden="true">C</span>
+            <strong>Clássica</strong>
+            <small>Grandes compositores</small>
+          </button>
+
+          <button class="genre-card" type="button" data-filter="mpb" role="listitem">
+            <span class="genre-icon" aria-hidden="true">M</span>
+            <strong>MPB</strong>
+            <small>Brasil em vinil</small>
+          </button>
+
+          <button class="genre-card" type="button" data-filter="sertanejo" role="listitem">
+            <span class="genre-icon" aria-hidden="true">S</span>
+            <strong>Sertanejo</strong>
+            <small>Raízes e clássicos</small>
+          </button>
+
+          <button class="genre-card" type="button" data-filter="sertanejo-universitario" role="listitem">
+            <span class="genre-icon" aria-hidden="true">SU</span>
+            <strong>Sertanejo Universitário</strong>
+            <small>Hits contemporâneos</small>
+          </button>
+        </nav>
+      </div>
+    </section>
+
+    <section class="catalog section" id="catalogo" aria-labelledby="catalog-title">
+      <div class="container">
+        <header class="catalog-toolbar">
+          <div class="section-heading compact">
+            <p class="eyebrow">Nossa seleção</p>
+            <h2 id="catalog-title">Discos em destaque</h2>
+            <p id="catalog-status" aria-live="polite">Exibindo todo o catálogo.</p>
+          </div>
+
+          <form class="search-field" id="search-form" role="search">
+            <label for="search-input">Buscar disco</label>
+            <input id="search-input" type="search" placeholder="Artista, álbum ou gênero..." autocomplete="off">
+          </form>
+        </header>
+
+        <section class="product-grid" id="product-grid" aria-label="Catálogo de discos">
+          <article class="product-card" data-genre="rock" data-search="queen greatest hits rock anos 80">
+            <div class="product-image">
+              <img src="https://unsplash.com/photos/b9CcBwmq30c/download?force=true&w=800" alt="Discos de vinil em uma loja, imagem ilustrativa" loading="lazy">
+              <span class="tag">Rock</span>
+            </div>
+            <div class="product-body">
+              <p class="product-year">1981 • LP</p>
+              <h3>Queen — Greatest Hits</h3>
+              <p>Coletânea marcante com alguns dos maiores clássicos do rock britânico.</p>
+              <footer class="product-footer">
+                <span class="price-label">Preço estimado</span>
+                <strong class="price">R$ 149,90</strong>
+              </footer>
+            </div>
+          </article>
+
+          <article class="product-card" data-genre="rock" data-search="nirvana nevermind rock anos 90">
+            <div class="product-image">
+              <img src="https://unsplash.com/photos/2-hWaESjEic/download?force=true&w=800" alt="Coleção de discos de vinil, imagem ilustrativa" loading="lazy">
+              <span class="tag">Rock</span>
+            </div>
+            <div class="product-body">
+              <p class="product-year">1991 • LP</p>
+              <h3>Nirvana — Nevermind</h3>
+              <p>Um dos discos mais representativos do rock alternativo dos anos 1990.</p>
+              <footer class="product-footer">
+                <span class="price-label">Preço estimado</span>
+                <strong class="price">R$ 179,90</strong>
+              </footer>
+            </div>
+          </article>
+
+          <article class="product-card" data-genre="pop-rock" data-search="a-ha hunting high and low pop rock anos 80">
+            <div class="product-image">
+              <img src="https://unsplash.com/photos/iozWK42-9ds/download?force=true&w=800" alt="Pessoa escolhendo discos de vinil, imagem ilustrativa" loading="lazy">
+              <span class="tag">Pop Rock</span>
+            </div>
+            <div class="product-body">
+              <p class="product-year">1985 • LP</p>
+              <h3>a-ha — Hunting High and Low</h3>
+              <p>Pop rock oitentista com sintetizadores e melodias que marcaram uma geração.</p>
+              <footer class="product-footer">
+                <span class="price-label">Preço estimado</span>
+                <strong class="price">R$ 129,90</strong>
+              </footer>
+            </div>
+          </article>
+
+          <article class="product-card" data-genre="jazz" data-search="miles davis kind of blue jazz">
+            <div class="product-image">
+              <img src="https://unsplash.com/photos/F7W1QP62psQ/download?force=true&w=800" alt="Seção de discos de jazz em vinil, imagem ilustrativa" loading="lazy">
+              <span class="tag">Jazz</span>
+            </div>
+            <div class="product-body">
+              <p class="product-year">1959 • LP</p>
+              <h3>Miles Davis — Kind of Blue</h3>
+              <p>Referência absoluta do jazz, reconhecida por sua atmosfera e improvisação.</p>
+              <footer class="product-footer">
+                <span class="price-label">Preço estimado</span>
+                <strong class="price">R$ 189,90</strong>
+              </footer>
+            </div>
+          </article>
+
+          <article class="product-card" data-genre="classica" data-search="beethoven sinfonia 9 musica classica">
+            <div class="product-image">
+              <img src="https://unsplash.com/photos/uPe_xc_5P_I/download?force=true&w=800" alt="Discos expostos em prateleiras, imagem ilustrativa" loading="lazy">
+              <span class="tag">Clássica</span>
+            </div>
+            <div class="product-body">
+              <p class="product-year">Edição especial • LP</p>
+              <h3>Beethoven — Sinfonia nº 9</h3>
+              <p>Uma obra essencial da música clássica em edição para apreciadores de vinil.</p>
+              <footer class="product-footer">
+                <span class="price-label">Preço estimado</span>
+                <strong class="price">R$ 119,90</strong>
+              </footer>
+            </div>
+          </article>
+
+          <article class="product-card" data-genre="mpb" data-search="elis regina essa mulher mpb brasil">
+            <div class="product-image">
+              <img src="https://tse3.mm.bing.net/th/id/OIP.QOlN89lYwAbpSrdq4CZUPAHaFj?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Pessoas pesquisando discos em uma loja, imagem ilustrativa" loading="lazy">
+              <span class="tag">MPB</span>
+            </div>
+            <div class="product-body">
+              <p class="product-year">1979 • LP</p>
+              <h3>Elis Regina — Essa Mulher</h3>
+              <p>Interpretação marcante de uma das maiores vozes da música popular brasileira.</p>
+              <footer class="product-footer">
+                <span class="price-label">Preço estimado</span>
+                <strong class="price">R$ 159,90</strong>
+              </footer>
+            </div>
+          </article>
+
+          <article class="product-card" data-genre="sertanejo" data-search="chitaozinho xororo classico sertanejo">
+            <div class="product-image">
+              <img src="https://unsplash.com/photos/2-hWaESjEic/download?force=true&w=800" alt="Fileiras de discos de vinil em loja, imagem ilustrativa" loading="lazy">
+              <span class="tag">Sertanejo</span>
+            </div>
+            <div class="product-body">
+              <p class="product-year">Clássicos • LP</p>
+              <h3>Chitãozinho & Xororó — Clássicos</h3>
+              <p>Uma seleção para recordar grandes momentos do sertanejo brasileiro.</p>
+              <footer class="product-footer">
+                <span class="price-label">Preço estimado</span>
+                <strong class="price">R$ 109,90</strong>
+              </footer>
+            </div>
+          </article>
+
+          <article class="product-card" data-genre="sertanejo-universitario" data-search="jorge mateus sertanejo universitario">
+            <div class="product-image">
+              <img src="https://unsplash.com/photos/b9CcBwmq30c/download?force=true&w=800" alt="Loja com coleção de discos de vinil, imagem ilustrativa" loading="lazy">
+              <span class="tag">Sertanejo Universitário</span>
+            </div>
+            <div class="product-body">
+              <p class="product-year">Edição comemorativa • LP</p>
+              <h3>Jorge & Mateus — Ao Vivo</h3>
+              <p>Sucessos do sertanejo universitário reunidos em uma edição para colecionadores.</p>
+              <footer class="product-footer">
+                <span class="price-label">Preço estimado</span>
+                <strong class="price">R$ 139,90</strong>
+              </footer>
+            </div>
+          </article>
+        </section>
+
+        <aside class="empty-state" id="empty-state" hidden aria-live="polite">
+          <span aria-hidden="true">◎</span>
+          <h3>Nenhum disco encontrado</h3>
+          <p>Tente outro termo ou selecione a opção “Todos”.</p>
+        </aside>
+
+        <p class="price-note">* Valores meramente estimados para fins expositivos. Consulte a loja para confirmar disponibilidade e preço.</p>
+      </div>
+    </section>
+
+    <section class="about section" id="sobre" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-photo">
+          <img
+            src="https://i.pinimg.com/736x/25/10/dc/2510dc4be861ed66222bd8838e6cf1fe.jpg"
+            alt="Clientes escolhendo discos de vinil em uma loja"
+            loading="lazy"
+          >
+        </div>
+        <article class="about-copy">
+          <p class="eyebrow">Sobre a Retro Discos</p>
+          <h2 id="about-title">Música para ouvir, colecionar e guardar na memória.</h2>
+          <p>
+            A Retro Discos é uma vitrine dedicada à cultura do vinil. Nosso catálogo reúne
+            diferentes estilos e décadas para aproximar novos ouvintes e colecionadores da
+            experiência única de colocar um disco para tocar.
+          </p>
+          <p>
+            Este site é expositivo: os preços são referências e o atendimento acontece diretamente
+            pelo WhatsApp da loja.
+          </p>
+          <a class="text-link whatsapp-link" href="https://wa.me/5531989695319" target="_blank" rel="noopener noreferrer">Falar com a loja →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section" id="contato" aria-labelledby="contact-title">
+      <div class="container contact-card">
+        <article>
+          <p class="eyebrow">Encontrou seu próximo disco?</p>
+          <h2 id="contact-title">Entre em contato!</h2>
+          <p>Consulte disponibilidade, valores e informações sobre os vinis diretamente com a loja.</p>
+        </article>
+        <a class="btn btn-whatsapp whatsapp-link" href="https://wa.me/5531989695319" target="_blank" rel="noopener noreferrer">
+          Abrir WhatsApp
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#inicio">
+          <img src="assets/logo.svg" alt="" width="48" height="48">
+          <span><strong>RETRO DISCOS</strong><small>Vinis & Música</small></span>
+        </a>
+        <p>Catálogo expositivo de discos de vinil.</p>
+      </div>
+
+      <div>
+        <h2>Visite a loja</h2>
+        <address>
+          Endereço da loja: Rua Paineiras, 1300, Contagem, Minas Gerais, 32310-400.
+        </address>
+      </div>
+
+      <div>
+        <h2>Navegação</h2>
+        <a href="#generos">Gêneros</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#sobre">Sobre</a>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="current-year"></span> Retro Discos. Projeto acadêmico.</p>
+      <p>feito por: ArthurHenrique-eng.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" type="button" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
